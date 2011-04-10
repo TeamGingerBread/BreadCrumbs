@@ -1,0 +1,140 @@
+﻿Goal: User receives and acts upon person-to-person Place-it To-do
+
+Scope:  External, Internal, UI
+
+Pre-Condition: Account, Locomoto System up
+
+Success State:  User completes to-do, and marks it as done, or declines it for this visit.
+
+Failed State: No effect
+
+Primary Actor: Receiver
+
+Secondary Actor:
+ None
+
+Start Action: User moves towards a specific location with a To-do.
+
+Description:
+1. User moves towards a specific location with a To-do.
+2. As user nears the location, system displays the header of  to-do (or list of to-do headers)
+3. User selects to-do
+4. System displays the details.
+5. (Assume user declines to-do)
+    A. User hits "decline to-do" button.
+    B. System notifies the creator of the to-do (if someone other than user) that tod-o has been declined.
+    C. System saves to-do, but it removes it from users list, for this visit.
+6. (If user accepts)
+   A. User hits accept to-do button.
+   B. System displays confirmation: "Are you sure you gonna do the to-do?
+   C. User confirms
+   D. System removes todo from the users list.
+
+Variations:
+	Person never goes to location,
+        	Receiver doesn't exist,
+	No signal when tagging,
+
+Extensions:
+        Receiver blocks sender,
+        GeoSound,
+        Map that shows location of notes
+
+
+
+
+
+
+
+
+
+
+Goal: User sends a person to person place-it to-do
+
+Scope:  External, Internal, UI
+
+Pre-Condition: Account, Locomoto System up
+
+Success State:  Place-it to-do posted
+
+Failed State: No effect
+
+Primary Actor: Sender
+
+Secondary Actor:
+ None
+
+Start Action: Start place-it to-do activity
+
+Description:
+1. Start place-it to-do activity
+2. System displays Google Maps 
+3. Click/point to location on map
+4. System tags location and opens to-do interface
+5. User tags receiver 
+6. User types to-do message
+7. User hits “post” button 
+8. System saves to-do and and notifies receiver when they visit location
+
+Variations:
+	Location is not accessible,
+        	Receiver doesn't exist,
+	No signal when tagging
+
+Extensions:
+	GeoSound,
+ 	Group tagging,
+	Geo tagging
+	
+
+
+
+
+
+
+
+
+
+
+
+
+Goal: User customizes settings
+
+Scope:  External, Internal, UI
+
+Pre-Condition: Locomoto System up
+
+Success State: Customized settings saved to phone 
+
+Failed State: No effect
+
+Primary Actor: User
+
+Secondary Actor:
+ None
+
+Start Action: Start settings activity
+
+Description:
+1. Start setting activity
+2. System displays setting options
+3. User inputs time specifications
+4. User selects location 
+1. System displays Google Maps
+2. User selects location on map
+3. System returns to previous setting screen
+5. User selects phone settings to turn on at time and location specified 
+6. User clicks “save” button
+7. System saves settings 
+
+Variations:
+	conflicting settings
+	phone does not supported feature
+	
+Extensions:
+	volume, 
+            vibrate, 
+            brightness control,	
+	delay/block messages
+	
+ 
